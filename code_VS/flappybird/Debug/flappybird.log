@@ -1,0 +1,3 @@
+﻿  flappybird.cpp
+c:\users\steven chen\source\repos\flappybird\flappybird\flappybird.cpp(275): warning C4715: “Crash”: 不是所有的控件路径都返回值
+  flappybird.vcxproj -> C:\Users\Steven Chen\source\repos\flappybird\Debug\flappybird.exe
