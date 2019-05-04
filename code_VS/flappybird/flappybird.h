@@ -33,6 +33,9 @@
 //Macro in Queue
 #define INIT_ELEMENTS_TUBE 2
 #define MAX_ELEMENTS_TUBE 5
+//Setting Macro
+#define OP_MOUSE 0
+#define OP_KEYBOARD 1
 
 //SkyBlue is 78 192 202
 //GrassGreen is 94 226 112

@@ -1,0 +1,3 @@
+﻿  Entrance.cpp
+c:\users\steven chen\flappybird-c-easyx\code_vs\flappybird\entrance.cpp(18): warning C4091: “static ”: 没有声明变量时忽略“button”的左侧
+  flappybird.vcxproj -> C:\Users\Steven Chen\Flappybird-C-EasyX\code_VS\x64\Debug\flappybird.exe

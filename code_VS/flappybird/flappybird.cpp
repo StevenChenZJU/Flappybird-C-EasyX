@@ -26,8 +26,9 @@ extern RECT whole;
 struct bird Bird;
 static int score;
 static char cscore[10];
-//Queue
 
+//Global
+//Queue
 Queue Tube;
 //image
 //[1]is the origin picture and [0] is the mask
@@ -35,7 +36,8 @@ IMAGE BirdPic[2];
 IMAGE TubeUpPic[2];
 IMAGE TubeMiddlePic[2];
 IMAGE TubeDownPic[2];
-
+//Setting
+int Operate;
 
 int main()
 {
