@@ -6,6 +6,11 @@
 #include "Queue.h"
 #include "flappybird.h"
 
+//bug : when getting back to ectrance
+//		the click is useless
+//solved: caused by the iteration of different functions
+
+
 COLORREF SkyBlue, GrassGreen;
 RECT whole;
 //local struct
@@ -36,7 +41,7 @@ void Entrance(void)
 	putimage(0, 0, &BeginBack);
 
 
-	//the entry button
+	//the entry button and draw it
 	Button BeginButton = CreateButton(300, 350, 200, 300, WHITE, bstr);
 	//the setting button
 	Button SettingButton = CreateButton(380, 430, 200, 300, WHITE, sstr);
@@ -46,13 +51,18 @@ void Entrance(void)
 		MOUSEMSG m;
 		m = GetMouseMsg();
 
-		if (m.x >= 200 && m.x <= 300 && m.y >= 300 && m.y <= 350 && m.mkLButton)
+		if (m.mkLButton)
 		{
-			break;
-		}
-		else if (m.x >= SettingButton.left && m.x <= SettingButton.right && m.y >= SettingButton.top && m.y <= SettingButton.bottom && m.mkLButton)
-		{
-			Setting();
+			if (m.x >= BeginButton.left && m.x <= BeginButton.right && m.y >= BeginButton.top && m.y <= BeginButton.bottom)
+			{
+				break;
+			}
+			else if (m.x >= SettingButton.left && m.x <= SettingButton.right && m.y >= SettingButton.top && m.y <= SettingButton.bottom)
+			{
+				Setting();
+				break;
+			}
+
 		}
 	}
 }
@@ -70,6 +80,7 @@ void Setting()
 		if (m.x >= BackButton.left && m.x <= BackButton.right && m.y >= BackButton.top && m.y <= BackButton.bottom && m.mkLButton)
 		{
 			Entrance();
+			break;
 		}
 	}
 }
